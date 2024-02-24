@@ -28,6 +28,10 @@
         <servlet-name>RecCallServlet</servlet-name>
         <servlet-class>com.main.servlet.RecCallServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecSMSServlet</servlet-name>
+        <servlet-class>com.main.servlet.RecSMSServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MakeCallServlet</servlet-name>
         <url-pattern>/MakeCallServlet</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>RecCallServlet</servlet-name>
         <url-pattern>/RecCallServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecSMSServlet</servlet-name>
+        <url-pattern>/RecSMSServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

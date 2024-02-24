@@ -10,7 +10,7 @@ public class GitHubFileUpdater {
 
     public static void uploadXML(String myXML) {
         String username = "hamdyKouta1";
-        String token = "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";
+        String token = "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";
         String repositoryOwner = "hamdyKouta1";
         String repositoryName = "xml";
         String filePath = "callling.xml";

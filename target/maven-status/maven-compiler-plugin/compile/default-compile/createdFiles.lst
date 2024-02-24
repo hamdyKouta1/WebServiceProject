@@ -6,6 +6,8 @@ com/main/MyTwilio.class
 com/main/servlet/MakeSMSServlet.class
 com/mycompany/webservicesproject/JakartaRestConfiguration.class
 com/main/servlet/MakeCallServlet.class
+com/main/servlet/RecCallServlet.class
+com/main/servlet/RecSMSServlet.class
 com/main/servlet/HomeServlet.class
 com/main/servlet/AdminServlet.class
 com/main/Action.class
