@@ -14,7 +14,6 @@ import java.io.IOException;
 
 
 public class RecCallServlet extends HttpServlet {
-  // Handle HTTP POST to /voice
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
       

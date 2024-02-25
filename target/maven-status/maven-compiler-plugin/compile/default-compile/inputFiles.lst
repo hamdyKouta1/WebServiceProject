@@ -1,8 +1,10 @@
+/home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/UserInfo.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/mycompany/webservicesproject/JakartaRestConfiguration.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/MakeCallServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/RecSMSServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/Action.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/SMSServlet.java
+/home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/ListMsgServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/RecCallServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/HomeServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/MyTwilio.java
@@ -12,3 +14,4 @@
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/AdminServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/mycompany/webservicesproject/resources/JakartaEE8Resource.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/GitHubFileUpdater.java
+/home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/ListData.java

@@ -32,6 +32,14 @@
         <servlet-name>RecSMSServlet</servlet-name>
         <servlet-class>com.main.servlet.RecSMSServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListData</servlet-name>
+        <servlet-class>com.main.servlet.ListData</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListMsgServlet</servlet-name>
+        <servlet-class>com.main.servlet.ListMsgServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MakeCallServlet</servlet-name>
         <url-pattern>/MakeCallServlet</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>RecSMSServlet</servlet-name>
         <url-pattern>/RecSMSServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListData</servlet-name>
+        <url-pattern>/ListData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListMsgServlet</servlet-name>
+        <url-pattern>/ListMsgServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
