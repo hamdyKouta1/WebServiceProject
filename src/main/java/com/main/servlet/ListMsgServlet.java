@@ -45,20 +45,10 @@ public class ListMsgServlet extends HttpServlet {
 
             request.getRequestDispatcher("header.html").include(request, response);
 
-            out.print("<div class=\"centered-div\">\n"
-                    + "    <span>Servlet</span>\n"
-                    + "    <br><br>\n"
-                    + "    <form id=\"searchservleet\" method=\"GET\" action=\"doSearchHomeServlet\">\n"
-                    + "\n"
-                    + "        <input type=\"text\" name=\"doSearchX\">\n"
-                    + "        <br><br>\n"
-                    + "\n"
-                    + "        <input type=\"submit\" value=\"search\">\n"
-                    + "        <br><br>\n"
-                    + "    </form>\n"
-                    + "</div>\n"
-                    + "\n"
-                    + "<br><br><br><br>\n"
+            out.print(
+                    "<section>"
+                            + "   <div class=\"centered-div2\">\n"
+                            + "<br><br>\n"
                     + "\n"
                     + "<h2>Recived SMS</h2>\n"
                     + "\n"
@@ -80,14 +70,14 @@ public class ListMsgServlet extends HttpServlet {
             out.print(
                     " </tbody>\n"
                     + "</table>\n"
-                            +"<br><br>"
-                             + "<h2>Recived SMS</h2>\n"
+                    + "<br><br>"
+                    + "<h2>Recived Call</h2>\n"
                     + "\n"
                     + "<table>\n"
                     + "    <thead>\n"
                     + "        <tr>\n"
                     + "            <th>Phone Number</th>\n"
-                    + "            <th>SMS MSG</th>\n"
+                    + "            <th>Call MSG</th>\n"
                     + "        </tr>\n"
                     + "    </thead>\n"
                     + "    <tbody>"
@@ -101,7 +91,10 @@ public class ListMsgServlet extends HttpServlet {
             out.print(
                     " </tbody>\n"
                     + "</table>\n"
-                    + "\n");
+                    + "\n"
+                            +"</div>"
+                         +       "</section>"
+);
             request.getRequestDispatcher("footer.html").include(request, response);
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(ListMsgServlet.class.getName()).log(Level.SEVERE, null, ex);

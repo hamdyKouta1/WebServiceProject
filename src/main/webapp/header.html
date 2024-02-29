@@ -1,113 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sample HTML Table</title>
-        <style>
-            body {
-                display: block;
-                margin: 0;
-                padding: 60px;
-                align-items: center;
-                justify-content: center;
-                height: 1080px;
-                background-color: #333;
-
-            }
-
-            .centered-div {
-                width: 100%;
-                padding: 5px;
-                border: 1px solid #ccc;
-                text-align: center;
-                background-color: #444;
-                color: white;
-
-            }
-
-            table {
-                border-collapse: collapse;
-                width: 100%;
-                margin-top: 10px;
-            }
-
-            th, td {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-                color: white
-            }
-
-            th {
-                background-color: #444;
-            }
-
-            header {
-                background-color: #333;
-                padding: 10px;
-                color: white;
-                text-align: center;
-            }
-
-            nav {
-                display: flex;
-                justify-content: space-around;
-                background-color: #444;
-                padding: 10px;
-            }
-
-            nav a {
-                text-decoration: none;
-                color: white;
-            }
-            footer {
-                background-color: #333;
-                color: white;
-                text-align: center;
-                padding: 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-            h2{
-                color: white;
-
-            }
-            #profile-container {
-                margin: 5% 40%;
-                width :150px;
-                background-color: gainsboro;
-                padding: 120px;
-            }
-
-            #user-greeting {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-
-            #username {
-                font-size: 16px;
-            }
-
-            #user-image {
-                border-radius: 50%;
-                margin-top: 10px;
-            }
-
-            #good-day-message {
-                margin-top: 20px;
-                font-size: 18px;
-            }
-        </style>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="styleForm.css"> <!-- This line links to an external CSS file -->
     </head>
+
     <body>
+
         <header>
-            <nav>
-                <a href="HomeServlet">List of Users</a>
-                <a href="ToGoogleServlet">Search in Google</a>
-                <a href="NewServlet">Search in Users</a>
-                <a href="ProfileServlet">Profile</a>
-                <a href="LogoutServlet">Log Out</a>
-            </nav>
+            <h1>Admin</h1>
+            <div class="header-buttons">
+                <!-- These buttons are links to different servlets -->
+                <button><a href="SMSServlet">SMS</a></button>
+                <button><a href="CallServlet">Call</a></button>
+                <button><a href="ChatServlet">Chat</a></button>
+                <button><a href="AdminServlet">Admin</a></button>
+            </div>
         </header>
+
+
+    
