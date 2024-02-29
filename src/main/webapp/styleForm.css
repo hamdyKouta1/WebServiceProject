@@ -97,3 +97,12 @@ a {
 a:hover {
     color: #fff;
 }
+
+.centered-div {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #444;
+    color: white;
+}

@@ -40,6 +40,18 @@
         <servlet-name>ListMsgServlet</servlet-name>
         <servlet-class>com.main.servlet.ListMsgServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TcpClient</servlet-name>
+        <servlet-class>com.main.servlet.TcpClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UdpClient</servlet-name>
+        <servlet-class>com.main.servlet.UdpClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChatServlet</servlet-name>
+        <servlet-class>com.main.servlet.ChatServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MakeCallServlet</servlet-name>
         <url-pattern>/MakeCallServlet</url-pattern>
@@ -79,6 +91,18 @@
     <servlet-mapping>
         <servlet-name>ListMsgServlet</servlet-name>
         <url-pattern>/ListMsgServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TcpClient</servlet-name>
+        <url-pattern>/TcpClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UdpClient</servlet-name>
+        <url-pattern>/UdpClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChatServlet</servlet-name>
+        <url-pattern>/ChatServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -248,4 +248,65 @@ public class JDBC {
 
         return resl;
     }
+    
+    public List<UserInfo> GetAllCall() throws ClassNotFoundException {
+
+        String GetUser = "SELECT * FROM call_rec";
+        ArrayList<UserInfo> userList = new ArrayList();
+        Class.forName("org.postgresql.Driver");
+
+        try (
+                Connection connection = DriverManager.getConnection(url, user, password); PreparedStatement prepStrSID = connection.prepareStatement(GetUser);) {
+
+            try (ResultSet resultSet = prepStrSID.executeQuery()) {
+
+                while (resultSet.next()) {
+                   
+                    String from = resultSet.getString("from");
+                    String call = resultSet.getString("call");
+                   
+
+                    UserInfo data = new UserInfo(from, call);
+                    userList.add(data);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return userList;
+    }
+    
+    public boolean SetCall(String from, String call) throws ClassNotFoundException {
+        boolean resl = false;
+
+        String insertUser = " insert into call_rec (\"from\",\"call\") values (? , ? )";
+
+        Class.forName("org.postgresql.Driver");
+
+        try (
+                Connection connection = DriverManager.getConnection(url, user, password)) {
+            try (
+                    PreparedStatement preparedStatement = connection.prepareStatement(insertUser)) {
+
+                preparedStatement.setString(1, from);
+                preparedStatement.setString(2, call);
+             
+                int rowsAffected = preparedStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    resl = true;
+
+                    System.out.println(rowsAffected + " row(s) inserted successfully.");
+
+                } else {
+                    resl = false;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resl;
+    }
 }

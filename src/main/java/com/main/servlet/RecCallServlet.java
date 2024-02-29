@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package com.main.servlet;
+
+import com.main.JDBC;
 import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.voice.Say;
@@ -11,25 +13,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class RecCallServlet extends HttpServlet {
-  protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-      
-    Say say = new Say.Builder("Hello world!").build();
-    VoiceResponse twiml = new VoiceResponse.Builder().say(say).build();
 
-    // Render TwiML as XML
-    response.setContentType("text/xml");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String msg = "Hello world!";
+        Say say = new Say.Builder(msg).build();
+        VoiceResponse twiml = new VoiceResponse.Builder().say(say).build();
+        String from = request.getParameter("From");
+        JDBC jdbc = new JDBC();
 
-    try {
-      response.getWriter().print(twiml.toXml());
-    } catch (TwiMLException e) {
-      e.printStackTrace();
+        try {
+            jdbc.SetCall(from, msg);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(RecCallServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        response.setContentType("text/xml");
+
+        try {
+            response.getWriter().print(twiml.toXml());
+        } catch (TwiMLException e) {
+            e.printStackTrace();
+        }
+
     }
-
-  }
 }
 
 /*

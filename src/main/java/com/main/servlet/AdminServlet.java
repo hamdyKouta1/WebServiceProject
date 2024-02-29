@@ -17,69 +17,66 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AdminServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AdminServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AdminServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+      private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        response.sendRedirect("ListMsgServlet");
+/*
+        out.println("<html><head><title>Message History</title>");
+        out.println("<style>");
+        out.println("body {");
+        out.println("    display: block;");
+        out.println("    margin: 0;");
+        out.println("    padding: 60px;");
+        out.println("    align-items: center;");
+        out.println("    justify-content: center;");
+        out.println("    height: 1080px;");
+        out.println("    background-color: #333;");
+        out.println("    color: white;");
+        out.println("}");
+        out.println("table {");
+        out.println("    border-collapse: collapse;");
+        out.println("    width: 80%;");
+        out.println("    margin-top: 20px;");
+        out.println("}");
+        out.println("th, td {");
+        out.println("    border: 1px solid #dddddd;");
+        out.println("    text-align: left;");
+        out.println("    padding: 8px;");
+        out.println("    color: white;");
+        out.println("}");
+        out.println("th {");
+        out.println("    background-color: #444;");
+        out.println("}");
+        out.println("</style>");
+        out.println("</head><body>");
+
+        // First section: Call History table
+        out.println("<section>");
+        out.println("<h2>CALL HISTORY</h2>");
+        out.println("<table>");
+        out.println("<tr><th>From</th><th>Call Msg</th></tr>");
+        // Example rows (replace with actual data retrieval logic)
+        out.println("<tr><td>John</td><td>Hello, how are you?</td></tr>");
+        out.println("<tr><td>Alice</td><td>Meeting tomorrow at 10 AM</td></tr>");
+        // Add more rows as needed
+        out.println("</table>");
+        out.println("</section>");
+
+        // Second section: SMS History table
+        out.println("<section>");
+        out.println("<h2>MSG HISTORY</h2>");
+        out.println("<table>");
+        out.println("<tr><th>From</th><th>SMS</th></tr>");
+        // Example rows (replace with actual data retrieval logic)
+        out.println("<tr><td>Bob</td><td>How's it going?</td></tr>");
+        out.println("<tr><td>Eve</td><td>Don't forget to buy milk!</td></tr>");
+        // Add more rows as needed
+        out.println("</table>");
+        out.println("</section>");
+
+        out.println("</body></html>");*/
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }

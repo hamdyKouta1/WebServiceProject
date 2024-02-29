@@ -2,9 +2,12 @@
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/mycompany/webservicesproject/JakartaRestConfiguration.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/MakeCallServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/RecSMSServlet.java
+/home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/ChatServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/Action.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/SMSServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/ListMsgServlet.java
+/home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/TcpClient.java
+/home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/UdpClient.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/RecCallServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/servlet/HomeServlet.java
 /home/hkouta/NetBeansProjects/WebServicesProject/src/main/java/com/main/MyTwilio.java
