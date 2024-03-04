@@ -24,10 +24,11 @@ public class RecCallServlet extends HttpServlet {
         Say say = new Say.Builder(msg).build();
         VoiceResponse twiml = new VoiceResponse.Builder().say(say).build();
         String from = request.getParameter("From");
+        String date = request.getParameter("Date");
         JDBC jdbc = new JDBC();
 
         try {
-            jdbc.SetCall(from, msg);
+            jdbc.SetCall(from, msg,date);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(RecCallServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

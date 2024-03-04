@@ -35,12 +35,13 @@ public class RecSMSServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String from = request.getParameter("From");
         String body = request.getParameter("Body");
+        String date = request.getParameter("Date");
         JDBC jdbc = new JDBC();
         // Handle the incoming SMS
         System.out.println("Received SMS from: " + from);
         System.out.println("Message body: " + body);
         try {
-            jdbc.SetSMS(from, body);
+            jdbc.SetSMS(from, body,date);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(RecSMSServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

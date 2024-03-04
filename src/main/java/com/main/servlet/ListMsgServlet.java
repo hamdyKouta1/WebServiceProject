@@ -57,6 +57,7 @@ public class ListMsgServlet extends HttpServlet {
                     + "        <tr>\n"
                     + "            <th>Phone Number</th>\n"
                     + "            <th>SMS MSG</th>\n"
+                    + "            <th>SMS Date</th>\n"
                     + "        </tr>\n"
                     + "    </thead>\n"
                     + "    <tbody>"
@@ -65,6 +66,7 @@ public class ListMsgServlet extends HttpServlet {
                 out.print("<tr>\n"
                         + "            <td>" + data.getFrom() + "</td>\n"
                         + "            <td>" + data.getMsg() + "</td>\n"
+                        + "            <td>" + data.getDate()+ "</td>\n"
                         + "        </tr>\n");
             }
             out.print(
@@ -78,6 +80,7 @@ public class ListMsgServlet extends HttpServlet {
                     + "        <tr>\n"
                     + "            <th>Phone Number</th>\n"
                     + "            <th>Call MSG</th>\n"
+                    + "            <th>Call Date</th>\n"
                     + "        </tr>\n"
                     + "    </thead>\n"
                     + "    <tbody>"
@@ -86,6 +89,7 @@ public class ListMsgServlet extends HttpServlet {
                 out.print("<tr>\n"
                         + "            <td>" + data.getFrom() + "</td>\n"
                         + "            <td>" + data.getMsg() + "</td>\n"
+                        + "            <td>" + data.getDate()+ "</td>\n"
                         + "        </tr>\n");
             }
             out.print(

@@ -190,7 +190,7 @@ public class JDBC {
     
     public List<UserInfo> GetAllSMS() throws ClassNotFoundException {
 
-        String GetUser = "SELECT * FROM sms";
+        String GetUser = "SELECT * FROM sms_date";
         ArrayList<UserInfo> userList = new ArrayList();
         Class.forName("org.postgresql.Driver");
 
@@ -203,9 +203,10 @@ public class JDBC {
                    
                     String from = resultSet.getString("from");
                     String msg = resultSet.getString("msg");
+                    String date = resultSet.getString("date");
                    
 
-                    UserInfo data = new UserInfo(from, msg);
+                    UserInfo data = new UserInfo(from, msg,date);
                     userList.add(data);
                 }
             }
@@ -217,10 +218,10 @@ public class JDBC {
         return userList;
     }
     
-    public boolean SetSMS(String from, String msg) throws ClassNotFoundException {
+    public boolean SetSMS(String from, String msg, String date) throws ClassNotFoundException {
         boolean resl = false;
 
-        String insertUser = " insert into sms (\"from\",\"msg\") values (? , ? )";
+        String insertUser = " insert into sms_date (\"from\",\"msg\",\"date\") values (? , ? ,?)";
 
         Class.forName("org.postgresql.Driver");
 
@@ -231,6 +232,7 @@ public class JDBC {
 
                 preparedStatement.setString(1, from);
                 preparedStatement.setString(2, msg);
+                preparedStatement.setString(2, date);
              
                 int rowsAffected = preparedStatement.executeUpdate();
                 if (rowsAffected > 0) {
@@ -251,7 +253,7 @@ public class JDBC {
     
     public List<UserInfo> GetAllCall() throws ClassNotFoundException {
 
-        String GetUser = "SELECT * FROM call_rec";
+        String GetUser = "SELECT * FROM call_rec_date";
         ArrayList<UserInfo> userList = new ArrayList();
         Class.forName("org.postgresql.Driver");
 
@@ -264,9 +266,10 @@ public class JDBC {
                    
                     String from = resultSet.getString("from");
                     String call = resultSet.getString("call");
+                    String date = resultSet.getString("date");
                    
 
-                    UserInfo data = new UserInfo(from, call);
+                    UserInfo data = new UserInfo(from, call, date);
                     userList.add(data);
                 }
             }
@@ -278,10 +281,10 @@ public class JDBC {
         return userList;
     }
     
-    public boolean SetCall(String from, String call) throws ClassNotFoundException {
+    public boolean SetCall(String from, String call,String date) throws ClassNotFoundException {
         boolean resl = false;
 
-        String insertUser = " insert into call_rec (\"from\",\"call\") values (? , ? )";
+        String insertUser = " insert into call_rec_date (\"from\",\"call\",\"date\") values (? , ? ,?)";
 
         Class.forName("org.postgresql.Driver");
 
@@ -292,6 +295,7 @@ public class JDBC {
 
                 preparedStatement.setString(1, from);
                 preparedStatement.setString(2, call);
+                preparedStatement.setString(3, date);
              
                 int rowsAffected = preparedStatement.executeUpdate();
                 if (rowsAffected > 0) {
