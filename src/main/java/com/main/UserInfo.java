@@ -13,11 +13,21 @@ public class UserInfo {
 
     String from;
     String msg;
+    String date;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
    
 
-    public UserInfo(String from, String msg) {
+    public UserInfo(String from, String msg, String datr) {
         this.from = from;
         this.msg = msg;
+        this.date = date;
 
     }
 
